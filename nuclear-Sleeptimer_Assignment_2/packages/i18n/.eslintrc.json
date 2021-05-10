@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "../../.eslintrc.json"
+  ],
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "ignorePatterns": [
+    "*.js"
+  ],
+  "rules": {
+    "@typescript-eslint/camelcase": 0
+  }
+}

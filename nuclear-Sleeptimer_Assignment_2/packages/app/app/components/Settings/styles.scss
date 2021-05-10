@@ -1,0 +1,178 @@
+@import "../../mixin";
+@import "../../vars";
+
+.settings_container {
+  display: flex;
+
+  width: 75%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  flex-flow: column;
+  font-size: 16px;
+
+  p {
+    line-height: 2rem;
+  }
+
+  .settings_section {
+    margin: 0 0 1rem 0;
+  }
+
+  .segment {
+    background: rgba($background2, 0.35);
+    border: 1px solid $background2;
+  }
+
+  .settings_item_text {
+    display: flex;
+    flex-flow: column;
+    line-height: 1rem;
+
+    .settings_item_name {
+    }
+  }
+
+  .settings_item_description {
+    color: rgba($white, 0.5);
+  }
+
+  .settings_item,
+  .settings_social_item {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+    justify-content: left;
+    margin: 2rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.string,
+    &.number,
+    &.node,
+    &.directory {
+      flex-flow: column;
+
+      .settings_item_text > label:only-child {
+        margin-bottom: 1em;
+      }
+
+      .input {
+        z-index: auto;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: lighter;
+    }
+
+    .checkbox {
+      align-self: flex-end;
+      flex: 0 0 auto;
+    }
+
+    .ui.input {
+      &.fluid {
+        width: 100%;
+      }
+
+      input {
+        color: $grey;
+        background-color: $background3;
+      }
+    }
+  }
+
+  .settings_social_item {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    .ui.input {
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+      flex: 1 1 auto;
+    }
+  }
+
+  .lastfm_icon {
+    color: $red;
+  }
+
+  .social_icon_bg {
+    color: $white;
+    font-size: 24px;
+  }
+
+  .header_container {
+    margin: 0 0;
+
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .slider_container {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+
+    div {
+      flex: 1 1 auto;
+    }
+
+    label {
+      &:first-child {
+        margin-right: 1em;
+      }
+
+      &:last-child {
+        margin-left: 1em;
+      }
+    }
+
+    #rrp-baseDiv {
+      margin: 0 2rem;
+    }
+  }
+
+  .folder_label {
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .directory_option {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .directory_content {
+      font-weight: bold;
+    }
+  }
+
+  .mastodon_logo {
+    svg {
+      height: 1.75em;
+    }
+  }
+}

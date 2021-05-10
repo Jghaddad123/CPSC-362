@@ -1,0 +1,18 @@
+@import '../../mixin.scss';
+
+.lyrics_view {
+  position: relative;
+  height: 100%;
+
+  .empty_state {
+    @include emptyState;
+  }
+  
+  .lyrics_text{
+    white-space: pre-line;
+    font-size: 1.3em;
+    margin-left: 1rem;
+    cursor: text;
+    user-select: text;
+  }
+}

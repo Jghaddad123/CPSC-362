@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "../../.eslintrc.json"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "globals": {
+    "_": true
+  },
+  "rules": {
+    "node/no-missing-import": ["error", {
+      "tryExtensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
+  }]
+  }
+}

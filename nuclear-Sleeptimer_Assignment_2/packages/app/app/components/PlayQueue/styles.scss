@@ -1,0 +1,57 @@
+@import "../../vars.scss";
+
+.play_queue_container {
+  display: flex;
+  overflow: visible;
+
+  flex: 1 1 auto;
+  flex-flow: column;
+
+  .play_queue_items {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+    overflow: auto;
+    transition: $short-duration;
+    height: 0;
+
+    div {
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .file_dragged_over {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $background3;
+    margin: 1rem;
+    border: 6px dashed rgba($white, 0.8);
+
+    *:not(i) {
+      display: none;
+    }
+  }
+
+  .track_dragged_over {
+    background: $background3;
+  }
+
+  .file_icon {
+    font-size: 5em;
+    align-self: center;
+    pointer-events: none;
+  }
+
+  &.compact {
+    .queue_menu_buttons {
+      a:not(.compactButton) {
+        display: none;
+      }
+    }
+  }
+}

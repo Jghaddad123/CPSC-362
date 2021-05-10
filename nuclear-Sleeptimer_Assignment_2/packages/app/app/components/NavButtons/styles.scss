@@ -1,0 +1,37 @@
+@import '../../vars.scss';
+
+.nav_buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1em;
+  z-index: 40;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blue;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+    &.disable {
+      opacity: 0.4;
+      cursor: not-allowed;
+    } 
+
+    &:not(.disable):hover {
+      background: darken($blue, 10%);
+    }
+
+    &:not(.disable):active {
+      background: darken($blue, 15%);
+    }
+
+    &:first-child {
+      margin-right: 12px;
+    }
+  }
+}

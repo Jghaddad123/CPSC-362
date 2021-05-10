@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "exclude": [
+    "../src/services/@windows",
+    "../src/services/@linux",
+    "node_modules/@nuclear/*/test",
+    "node_modules/@nuclear/ui/stories"
+  ]
+}

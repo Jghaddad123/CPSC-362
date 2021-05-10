@@ -1,0 +1,280 @@
+@import './vars.scss';
+
+html {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  -webkit-user-select: none;
+  font-family: $nuclear-font;
+}
+
+@keyframes body-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  animation: body-fade-in $long-duration;
+}
+
+body.dimmed {
+  #react-root {
+    height: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    transition: $short-duration;
+  }
+}
+
+a.disabled {
+  color: rgba($grey, 0.25);
+  cursor: default;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $background2 !important;
+    color: rgba($grey, 0.25);
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $background !important;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem !important;
+  background-color: $background2 !important;
+}
+
+//Semantic UI section
+.ui.segment {
+  color: $white;
+  background: $background3;
+  position: relative;
+}
+
+.ui.inverted.segment {
+  background: $background3;
+}
+
+.ui.menu,
+.ui.vertical.menu {
+  background: $background3;
+
+  .item {
+    color: $white;
+  }
+}
+
+.ui.secondary.pointing.menu {
+  border-color: rgba($white, 0.15);
+
+  a.item {
+    &:hover {
+      color: $white;
+    }
+
+    font-variant: all-small-caps;
+    font-size: 20px;
+  }
+
+  .active.item {
+    color: $white;
+    border-color: $green;
+
+    &:hover {
+      color: $white;
+      border-color: $green;
+    }
+  }
+}
+
+.ui.dimmer.visible {
+  z-index: 15;
+}
+
+.ui.tab.loading.segment,
+.ui.tab.loading,
+.ui.loader,
+.ui.dimmer .ui.loader {
+  &:before {
+    background: rgba($background2, 0.2);
+    border: 0.2em solid rgba($background2, 0.6);
+  }
+
+  &:after {
+    border-color: $green transparent transparent;
+  }
+}
+
+.ui.modals.dimmer {
+  background: rgba($black, 0.85);
+
+  .content {
+    height: auto;
+  }
+}
+
+.ui.modal.transition {
+  height: auto;
+}
+
+.ui.button {
+  transition: $short-duration;
+}
+
+.ui.primary.button {
+  background-color: $blue;
+
+  &:hover,
+  &:focus {
+    background-color: darken($blue, 10%);
+  }
+
+
+  &:active {
+    background-color: darken($blue, 20%);
+  }
+}
+
+.ui.inverted.button {
+  box-shadow: 0 0 0 1px $grey inset !important;
+}
+
+.ui.inverted.green.button {
+  border-color: $green;
+  color: $green;
+
+  &:hover,
+  &:focus {
+    background-color: $green;
+  }
+}
+
+.ui.inverted.red.basic.button:focus {
+  color: $red !important;
+
+  &:hover,
+  &:focus {
+    background-color: $red;
+  }
+}
+
+.ui.checkbox {
+  .box::before,
+  label::before {
+    background-color: rgba($background3, 0.35) !important;
+    transition: $medium-duration;
+  }
+
+  .box:hover::before,
+  label:hover::before {
+    background-color: rgba($background2, 0.25) !important;
+    transition: $medium-duration;
+  }
+}
+
+.ui.toggle.checkbox {
+  input:focus:checked ~ .box:before,
+  input:focus:checked ~ label:before,
+  input:checked ~ .box:before,
+  input:checked ~ label:before {
+    background-color: $blue !important;
+    transition: $medium-duration;
+  }
+}
+
+.ui.red.button,
+.ui.red.button:hover,
+.ui.red.button:focus,
+.ui.red.button:active {
+  background-color: $red;
+}
+
+.ui.dropdown {
+  .menu {
+    background: $bgdarker;
+    border: 1px solid rgba($bgdefault, 0.6);
+    box-shadow: 0rem 0.125rem 0.5rem 0.25rem rgba($black, 0.1);
+
+    .header,
+    .item,
+    .item:hover {
+      color: $white;
+    }
+
+    .item:hover {
+      background: $bgdefault;
+    }
+  }
+}
+
+hr {
+  border: 1px solid $bgdefault;
+}
+
+.item.fade.visible.transition {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  flex: 0 0 auto;
+  margin: 0.5rem;
+}
+
+.ui.inverted.list .item a:not(.ui) {
+  color: $white !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white !important;
+  }
+}
+
+.link_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background2;
+  color: $white !important;
+  width: 2rem;
+  height: 2rem;
+
+  &:hover {
+    background: lighten($background2, 10%);
+    color: $white !important;
+  }
+
+  &:active {
+    background: lighten($background2, 20%);
+    color: $white !important;
+  }
+}

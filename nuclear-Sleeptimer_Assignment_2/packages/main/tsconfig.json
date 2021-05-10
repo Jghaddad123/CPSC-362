@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["DOM"],
+    "outDir": "dist",
+    "allowJs": true,
+    "strict": false,
+    "typeRoots": [
+      "typings",
+      "../../node_modules/@types"
+    ]
+  },
+  "include": [
+    "src",
+    "typings",
+    "node_modules/@nuclear",
+    "../core/src"
+  ],
+  "exclude": [
+    "node_modules/@nuclear/*/test",
+    "node_modules/@nuclear/**/*.test*",
+    "node_modules/@nuclear/ui/stories",
+    "../ui/stories",
+    "../*/test"
+  ]
+}

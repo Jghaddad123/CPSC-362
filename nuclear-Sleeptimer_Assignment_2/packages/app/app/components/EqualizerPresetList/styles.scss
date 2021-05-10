@@ -1,0 +1,46 @@
+@import '../../mixin.scss';
+@import '../../vars.scss';
+
+.preset_list_container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  flex: 1 1 auto;
+  min-width: 120px;
+  flex-grow: 0;
+  margin-left: 1.5rem;
+
+  h3 {
+    margin-bottom: 0;
+  }
+  
+  .equalizer_list {
+    @include roundCorners;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .equalizer_item {
+    padding: 9px !important;
+    display: flex !important;
+    background: $background2;
+    margin-bottom: 1px;
+    user-select: none;
+    
+    .right {
+      flex-grow: 0;
+      width: 16px;
+      margin-left: 0 !important;
+      margin-right: 9px !important;
+    }
+  }
+
+  .equalizer_click_item {
+    background: $background3;
+    cursor: pointer;
+    
+    &:hover {
+      background: rgba($background2, 0.3);
+    }
+  }  
+}

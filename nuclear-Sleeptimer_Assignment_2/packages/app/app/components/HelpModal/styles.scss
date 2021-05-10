@@ -1,0 +1,44 @@
+@import '../../vars.scss';
+
+$icon_color: rgba($white, 0.75) !important;
+
+.ui.page.modals.dimmer {
+  background: rgba($background, 0.85);
+}
+
+.help_modal {
+  top: 25% !important;
+  color: $icon_color;
+  a {
+    color: $cyan;
+  }
+  .contributors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contributors_header {
+    color: $white !important;
+  }
+  .social_icons {
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    justify-content: space-between;
+    
+    .mastodon {
+      width: 28px;
+      cursor: pointer;
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        fill: $icon_color;
+      }
+    }
+  }
+}

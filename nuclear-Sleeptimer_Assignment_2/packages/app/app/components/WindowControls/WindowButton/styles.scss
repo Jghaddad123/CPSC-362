@@ -1,0 +1,23 @@
+.window_button_container {
+  display: flex;
+
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  cursor: pointer;
+
+  color: #f8f8f2;
+
+  font-size: 16px;
+
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+
+.window_button_container span {
+  width: 100%;
+
+  text-align: center;
+}

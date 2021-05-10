@@ -1,0 +1,90 @@
+@import '../../../mixin';
+@import '../../../vars';
+
+.library_simple_list_container {
+  // needed to fix "height" style being ignored (thus breaking scrolling)
+  display: table;
+}
+
+.library_simple_list {
+  background: transparent !important;
+  margin-top: 0;
+
+  .thead {
+    th {
+      position: relative;
+      color: rgba($white, 0.5) !important;
+      font-size: 20px !important;
+      background: transparent !important;
+      border-bottom: 0.5px solid rgba($white, 0.2) !important;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    // since virtualization is used, we have to pre-define the column widths
+    // (the width of the third column, title, is whatever is left over)
+    th:nth-child(1) { width: 42px; }
+    th:nth-child(2) { width: 30%; }
+    th:nth-child(4) { width: 25%; }
+  }
+
+  .tbody {
+    tr {
+      color: $white;
+    }
+
+    td {
+      @include ellipsis;
+      border-color: transparent;
+      max-width: 0;
+    }
+  }
+}
+
+/* Override Semantic UI small screen styles */
+@media only screen and (max-width: 767px) {
+  .library_simple_list {
+    .thead {
+      display: table-header-group !important;
+    }
+  }
+  .ui.table:not(.unstackable) .tbody {
+    display: table-row-group !important;
+  }
+  .ui.table:not(.unstackable) tr {
+    display: table-row !important;
+  }
+  .ui.table:not(.unstackable) tr>td,
+  .ui.table:not(.unstackable) tr>th {
+    display: table-cell !important;
+    padding: 0 !important;
+  }
+  .ui.table:not(.unstackable) tr>td {
+    border-bottom: 2px solid $background3 !important;
+  }
+  /* table header */
+  .ui.table:not(.unstackable) tr>th {
+    max-width: 42px !important;
+    padding-top: 0.928571em !important;
+    padding-bottom: 0.928571em !important;
+    border-bottom: 0.5px solid rgba($white, 0.2) !important;
+  }
+  /* picture icon header thing */
+  .ui.table:not(.unstackable) tr>th:nth-child(1) {
+    width: 42px !important;
+  }
+  /* artist column */
+  .ui.table:not(.unstackable) tr>th:nth-child(2),
+  .ui.table:not(.unstackable) tr>td:nth-child(2) {
+    padding-left: 0.785714em !important;
+  }
+}

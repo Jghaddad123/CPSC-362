@@ -1,0 +1,25 @@
+@import './vars';
+
+.compact_panel {
+  width: 3rem;
+
+  .sidebar_brand {
+    padding: 1rem 0;
+  }
+
+  .sidebar_menu_item_container {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .active_nav_link {
+    border: none;
+    background: rgba($background3, 0.6);
+  }
+
+  span {
+    margin: 0 !important;
+  }
+
+}
