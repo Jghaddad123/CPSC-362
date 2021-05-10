@@ -1,0 +1,493 @@
+
+
+*{
+    margin: 0px;
+    padding: 0;
+	
+}
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+  height: 4800px;
+  width:900px;
+}
+
+.hero{
+    height: 1000px;
+    width: 100%;
+   background-image: url("/static/cal_home/calendarbg.jpg");
+
+   background-position: center;
+    background-size: cover;
+    position:absolute;
+    border: 3px solid white;
+}
+
+
+.feature-arrow{
+  position:absolute;
+  top: 72%;
+left: 47%;
+
+}
+
+.feature-arrow img{
+  height:150px;
+  width: 100px;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container{
+
+position:absolute;
+height: 1000px;
+width:100%;
+background-image: url("/static/cal_home/paint.jpg");
+background-position: center;
+background-size: cover;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 500%;
+color:rgb(28, 37, 61);
+text-align: center;
+top:100%;
+
+border: 3px solid white;
+
+}
+
+/*Makes Features header boldened with white fill, but doesn't work on some browsers like IE
+
+.container h2{
+
+-webkit-text-stroke:5px black;
+-webkit-text-fill-color:white;
+}*/
+
+/*Calendar*/
+.about1{
+  position:absolute;
+top: 40%;
+  left: 15%;
+  padding: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  background-color: rgb(105, 230, 209);
+    border: 3px solid darkblue;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+
+}
+.about1 .btn{
+
+  position: absolute;
+  top: -90%;
+    left: -4%;
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+  transform: translate(50%, -50%);
+  font-size: 0px;
+  padding: 12px 24px;
+  border: none;
+  cursor:pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.about1 img{
+  height: 100%;
+  width:100%;
+}
+
+.about1:hover{
+  background-color:lightcoral;
+}
+
+/* Tasks icon */
+.about2{
+  position:absolute;
+  top: 40%;
+  right: 15%;
+  padding: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  border: 3px solid darkblue;
+  background-color: rgb(105, 230, 209);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  }
+  .about2 .btn{
+
+    position: absolute;
+    top: -90%;
+    left: -20%;
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    transform: translate(50%, -50%);
+    font-size: 0px;
+    padding: 12px 24px;
+    border: none;
+    cursor:pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+.about2 img{
+    height: 100%;
+    width:100%;
+  }
+
+
+.about2:hover{
+  background-color:lightcoral;
+}
+
+  /* Music icon */
+.about3{
+  position:absolute;
+  top: 80%;
+  left: 15%;
+  padding: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  border: 3px solid darkblue;
+  background-color: rgb(105, 230, 209);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  }
+
+  .about3 .btn{
+    position: absolute;
+    top: -90%;
+    left: 0%;
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    transform: translate(50%, -50%);
+    font-size: 0px;
+    padding: 12px 24px;
+    border: none;
+    cursor:pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+.about3 img{
+
+    height: 100%;
+    width:100%;
+  }
+
+
+.about3:hover{
+  background-color:lightcoral;
+}
+
+  /* Settings icon */
+.about4{
+  position:absolute;
+ padding: 20px;
+  top: 80%;
+  right: 15%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  border: 3px solid darkblue;
+  background-color: rgb(105, 230, 209);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  }
+
+  .about4 .btn{
+
+    position: absolute;
+    top: -90%;
+    left: -12%;
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    transform: translate(50%, -50%);
+    font-size: 0px;
+    padding: 12px 24px;
+    border: none;
+    cursor:pointer;
+    border-radius: 5px;
+    text-align: center;
+
+  }
+
+.about4 img{
+  float:left;
+    height: 100%;
+    width:100%;
+  }
+
+
+.about4:hover{
+  background-color:lightcoral;
+}
+
+.p-about{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: darkblue;
+      font-size: 22px;
+      top: 120%;
+}
+
+
+
+.form-box{
+    width: 380px;
+    height: 650px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    margin: 6% auto;
+    background:white;
+    border: 3px solid rgb(44, 128, 206);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.home_title{
+  color:rgb(94, 169, 253);
+  text-shadow: 1px 1px rgb(107, 51, 170);
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.button-box{
+    width: 190px;
+    margin: auto;
+    position: relative;
+
+    /*box-shadow: 0 0 20px 9px #ff61241f;*/
+    border-radius: 30px;
+    border-style:solid;
+    border-color: black;
+    background-color: rgb(42, 206, 218);
+    overflow: hidden;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.toggle-btn1{
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid black;
+    
+  border-left:black;
+  border-top: rgb(42, 206, 218);
+  border-bottom: rgb(42, 206, 218);
+    outline: none;
+    position:relative;
+}
+
+.toggle-btn2{
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid black;
+  
+  border-right:black;
+  border-top: rgb(42, 206, 218);
+  border-bottom: rgb(42, 206, 218);
+  outline: none;
+  position: relative;
+}
+
+
+.image-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.image-icons img{
+    width: 250px;
+    margin: 0 12px;
+    box-shadow: 0 0 15px 0 #6867673d;
+    border-radius: 50;
+}
+
+  /* Style the links inside the navigation bar */
+  .button-box a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 21px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .button-box a:hover {
+    background-color:lightskyblue;
+    color: black;
+  }
+  
+/* Might need to double check the active/current link. */
+
+  /* Add a color to the active/current link */
+  .button-box a.active {
+    background-color: rgb(173, 188, 230);
+    color: black;
+  }
+
+
+
+  div.calendar {
+    background-image: url("/static/cal_home/calendarbg2.jpg");
+    
+    background-position: center;
+    background-size: 110%;
+    position: absolute;
+    top: 201%;
+    width: 100%;
+    height: 700px;
+    }
+
+
+  .start-calendar{
+    position: relative;
+    padding: 50px;
+    top: 23%;
+    left: 8%;
+    border: 3px solid rgb(44, 128, 206);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color:rgb(253, 192, 200);
+    width: 380px;
+    height: 300px;
+  }
+  
+  h1{
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+    p.welcome-to-calendar{
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: darkblue;
+      font-size: 22px;
+      top: 120%;
+    }
+  
+
+
+
+
+  div.static {
+    background-image: url("/static/cal_home/taskbg.jpg");
+    
+    background-position: cover;
+    background-size: 90%;
+    background-position-x: 190%;
+    background-position-y: 10%;
+    position: absolute;
+    top: 272%;
+    width: 100%;
+    height: 750px;
+    }
+
+
+  .start-about{
+    position: relative;
+    padding: 50px;
+    top: 23%;
+    left: 8%;
+    border: 3px solid rgb(44, 128, 206);
+    background-color:lightskyblue;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 380px;
+    height: 380px;
+  }
+  
+  
+    p.welcome-to-about{
+      font-family: monospace;
+      color: darkblue;
+      font-size: 22px;
+      top: 120%;
+    }
+  
+
+  
+
+
+    .music{
+      background-image: url("/static/cal_home/musicbg.jpg");
+  position: absolute;
+  top: 348%;
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  background-size: 110%;
+    }
+  
+    .start-music{
+    position: relative;
+    padding: 50px;
+    top: 10%;
+    left: 8%;
+    border: 16px solid black;
+    background-color:rgb(204, 150, 187);
+    width: 360px;
+    height: 250px;
+    }
+  
+    p.welcome-to-music{
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      color: darkblue;
+      font-size: 22px;
+      top: 120%;
+    }
+
+
+    
+
+
+    .settings{
+      background-image: url("/static/cal_home/spectrum.png");
+  position: absolute;
+  top: 419%;
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  background-size: 110%;
+    }
+  
+    .start-settings{
+    position: relative;
+    padding: 60px;
+    top: 10%;
+    left: 8%;
+    border: 16px solid black;
+    width: 360px;
+    height: 300px;
+    background-color:white;
+    }
+  
+    p.welcome-to-settings{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: darkblue;
+      font-size: 22px;
+      top: 120%;
+    }

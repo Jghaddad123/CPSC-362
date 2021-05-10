@@ -1,0 +1,189 @@
+/* Add a black background color to the top navigation */
+.topnav{
+  background-color: #333;
+  /*overflow: hidden;*/
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:lightcyan;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: lightblue;
+  color: black;
+}
+
+.quotebtn{
+  color: orange;
+  position: relative;
+  background-color:#333;
+  border-color: transparent;
+  top:12px;
+  left: 0px;
+}
+
+.quoteDisplay {
+ overflow: hidden;
+ overflow-x: hidden;
+ position: relative;
+  background-color: lightblue;
+
+ border: 1px solid #333;
+
+  height:50px;
+  width: 60%;
+  top:-30px;
+  left:120px;
+  color: black;
+}
+
+.quoteDisplay p{
+ position: absolute;
+ text-shadow: 1px 1px black ;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ -moz-animation: scroll-slow 30s linear infinite;
+ -webkit-animation: scroll-slow 30s linear infinite;
+ animation: scroll-slow 30s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-slow {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-slow {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-slow {
+ 0%   {
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%);
+ }
+}
+
+
+.logout{
+  position:relative;
+  top: -80px;
+}
+
+
+
+
+
+
+
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 650px;
+  background-color:  #333;
+  color:orange;
+  border: 3px solid black;
+  z-index: 9;
+}
+
+
+.form-popup2 {
+  padding: 5px;
+  height: 50%;
+  width: 10%;
+  font-size: 18%;
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 1%;
+  
+  background-color: #69e6d1;
+  
+  color:rgb(28, 37, 61);
+  border: 3px solid black;
+  z-index: 9;
+  
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+
+.form-container .form-container input, button{
+
+  color: orange;
+  background-color: gray;
+  border: 1px solid black;
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+.form-container .form-container button, input{
+
+  color: orange;
+  background-color: gray;
+  border: 1px solid black;
+  cursor: pointer;
+  opacity: 1;
+}
+
+ #quote{
+
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor:default;
+}
+
+#closebtnm
+{
+  position: absolute;
+  top: 80%;
+  color:rgb(28, 37, 61);
+  background-color: rgb(105, 230, 209);
+}
+
+
+
+.form-container .btn:hover, .open-button:hover, .button:hover {
+  opacity: 0.8;
+}

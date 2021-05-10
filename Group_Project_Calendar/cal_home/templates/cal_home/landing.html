@@ -1,0 +1,130 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'cal_home/style.css' %}"">
+    <!--import 'cal_home/style.css'></import-->
+
+    <title>Task Scheduler</title>
+
+{% block content %}
+<body>
+<div>
+
+<div class = "hero">
+    <div class = "feature-arrow" style="margin-top: 50px;"> 
+        <a type="button" href="#features">
+            <img src="{% static '/cal_home/featuresarrow.png' %}">
+        </a>
+    </div>
+   <div class = "form-box">
+       <div class = "image-icons">
+        <img src="{% static '/cal_home/calendarpic1.jpg' %}">
+        </div>
+    <p>
+    <h1 class ="home_title">Organize your tasks!</h1> <br>
+    </p>
+        <div class = "button-box">
+            <div id="btn"></div>
+            <!-- Buttons will lead to respective pages once they are complete-->
+            <a type="button" class= "toggle-btn1" href="{% url 'login' %}">Log In</a>
+            <a type="button" class= "toggle-btn2" href="{% url 'register'%}">Sign Up</a>
+         </div>
+         <div class="image-icons">
+             <img src= "{% static '/cal_home/calendarpic2.png' %}">
+        </div>
+    </div>
+
+<div class="container">
+
+   <h2 id="features"> Features</h2>
+    <div class = "about1" >
+    
+        <a button class="btn" href="#calendar" ><img src= "{% static '/cal_home/calen1.png' %}"></img></a>
+    <h1>Calendar<br></h1>
+<p class = "p-about">Schedule tasks using this dynamic calendar!</p>
+    </div>
+
+    <div class = "about2">
+
+        <a button class="btn" href="#about" ><img src= "{% static '/cal_home/calen2.png' %}"></img></a>
+        <h1>Tasks<br></h1>
+        <p class = "p-about">Write down tasks so you don't forget!</p>
+    </div>
+
+
+    <div class = "about3">
+
+        
+        <a button class="btn" href="#music" ><img src= "{% static '/cal_home/calen3.png' %}"></img></a>
+   <h1>Music<br></h1>
+   <p class = "p-about">Listen to something while you schedule tasks!</p>
+</div>
+
+    <div class = "about4">
+
+        <a button class="btn" href="#settings" ><img src= "{% static '/cal_home/calen4.png' %}"></img></a>
+        <h1>Settings<br></h1>
+        <p class = "p-about">Make your task scheduler to your liking!</p>
+    </div>
+
+
+
+
+</div>
+
+
+<div id ="calendar" class = "calendar">
+    <div class = "start-calendar">
+    <h1> Schedule your Tasks: </h1>
+<p class = "welcome-to-calendar"> Introducing a dynamic calendar to schedule tasks on.<br><br>
+    We make scheduling tasks easy, fun, and reliable.<br>
+    Add, edit, and delete at will!<br>
+    You will get constant reminders to work on your task. <br>
+  </p>
+</div>
+</div>
+
+
+<div  id = "about" class = "static">
+    <div class = "start-about">
+        <h1> Organize yourself with a To Do List: </h1>
+    <p class = "welcome-to-about"><br>
+        Never miss another task! Just add it to your calendar.<br><br>
+        Schedule more than one task! Keep all of your tasks organized. <br>
+        Keep track of your own tasks, or your team's progress with this list.<br>
+      </p>
+    </div>
+    </div>
+    
+    
+      <div id ="music" class = "music">
+        <div class = "start-music">
+        <h1> Listen to music: </h1>
+    <p class = "welcome-to-music">Listen to your favorite tunes.<br><br>
+        Make scheduling fun by listening to music.<br>
+        You can put your favorite songs or some concentrating music to stay on task.<br>
+      </p>
+    </div>
+    </div>
+
+    <div id ="settings" class = "settings">
+        <div class = "start-settings">
+        <h1> Customize with a variety of settings: </h1>
+    <p class = "welcome-to-settings">Change your task scheduler to suit your tastes.<br><br>
+        Select a variety of color accents.<br>
+        Don't like the way some things work? You can change those too.<br>
+        Set your page to define <i>you.</i><br>
+      </p>
+    </div>
+    </div>
+
+
+    </div>
+
+</body>
+{% endblock content %}
+</html>

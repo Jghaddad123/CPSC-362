@@ -1,0 +1,156 @@
+
+
+*{
+    margin: 0px;
+    padding: 0;
+}
+
+.container{
+    position:absolute;
+    height: 100%;
+    width:5000px;
+    max-width:100%;
+    background-color:rgb(207, 229, 238);
+    background-size:contain;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 500%;
+    color:#1c253d;
+    
+    border: 10px solid #8a2be2;
+    
+    }
+
+.icon1{
+    position: absolute;
+ margin: auto;
+  top: 10%;
+    left: 15%;
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    border: 3px solid darkblue;
+    background-color: rgb(105, 230, 209);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    
+  }
+
+  .icon1 img{
+    height: 100px;
+    width:100px;
+  }
+
+  
+
+
+  
+
+  .icon1:hover{
+    background-color:lightcoral;
+  }
+  
+  /* Tasks icon */
+  .icon2{
+    position:absolute;
+    top: 10%;
+    right: 15%;
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    border: 3px solid darkblue;
+    background-color: rgb(105, 230, 209);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    }
+  .icon2 img{
+    height: 100px;
+    width:100px;
+    }
+  
+    
+  .icon2:hover{
+    background-color:lightcoral;
+  }
+    
+    /* Music icon */
+  .icon3{
+    position:absolute;
+    top: 60%;
+    left: 15%;
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    border: 3px solid darkblue;
+    background-color: rgb(105, 230, 209);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    }
+  .icon3 img{
+    
+    height: 100px;
+    width:100px;
+    }
+  
+    
+  .icon3:hover{
+    background-color:lightcoral;
+  }
+  
+    /* Settings icon */
+  .icon4{
+    position:absolute;
+   padding: 20px;
+    top: 60%;
+    right: 15%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    border: 3px solid darkblue;
+    background-color: #69e6d1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  
+    }
+
+    
+a{
+  color: #17a2b8;
+}
+
+  
+  .icon4 img{
+    height: 100px;
+    width:100px;
+    }
+  
+    
+  .icon4:hover{
+    background-color:lightcoral;
+  }
+  
+
+ #settingsbtn{
+   position: absolute;
+   top: 2%;
+   left: 1%;
+   height: 7%;
+   width: 7%;
+  padding: 20px;
+  font-size: 20%;
+  color:rgb(28, 37, 61);
+  background-color: rgb(105, 230, 209);
+  border: 1px solid black;
+  cursor: pointer;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  opacity: 1;
+  }

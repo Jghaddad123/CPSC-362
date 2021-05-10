@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" type="text/css" href="{% static '/cal_home/main.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'cal_home/calen-style.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'cal_home/home.css' %}">
+      <title>Task Scheduler</title>
+
+</head>
+<body onload = "useQuote();">
+ 
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div class="topnav">
+    <!---->
+    <a class="active" href={% url 'cal_home' %}>Home</a>
+    <a href={% url 'calen:calendarhome' %}>Calendar</a>
+    <a href="#Tasks">Tasks</a>
+    <a href="#Music">Music</a>
+    <a href="#Settings">Settings</a>
+   
+    
+        <button style="float:none" class="quotebtn" onclick="openForm();">Custom Quote</button>
+    <div style="float:none" id ="quoteDisplay" class = "quoteDisplay"><p><al>Click the button for a quote.</al></p></div>
+    <!-- Implement procedure to log out, maybe add a confirmation window/message before logging out?-->
+    <a style="float:right" class="logout" href={% url 'cal_landing' %}>Log Out</a>
+
+  </div>
+
+
+  <form class = "form-popup" id ="CustomQuote" onsubmit="addQuotes();">
+    <form action="/action_page.php" class="form-container">
+    <p>Got a quote in your head? Type it in to use it here!</p>
+    <input type="text" class = "txtq" placeholder="Enter a quote." id="quote" name = "quotePut">
+    <input class="btnm"  type="reset" value="Clear form" />
+    <input class="btnm" type="submit" value="Submit now" onclick="saveQuoteForm();"/>
+    <button class ="btnm" style="float:none" onclick="newQuote(); saveQuote(); closeForm()">Random</button>
+    <button type="button" class="btnm" onclick="closeForm()">Close</button>
+      </form>
+</form>
+      
+
+    <div class ="main-container">
+        {% block content %}
+          
+        {% endblock %}
+       
+    </div>
+
+
+    <script type="text/javascript" src="{% static 'cal_home/javascript.js' %}"></script>
+    <script type="text/javascript">
+      function useBgColor() {
+        var x = localStorage.getItem("bgcolor");
+        
+        document.getElementById("CalenTable").style.backgroundColor = x.value;
+   }</script>
+    
+</body>
+
+</html>

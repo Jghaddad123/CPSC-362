@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+{% block content %}
+	<link rel="preload" href="../index.js" as="script"></link>
+<head>
+	<title>Testing Page</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<div id ="title">Dynamic Calendar Placeholder</div>
+	<div id="app"></div>
+
+	<script type='text/javascript' src="./index.js"></script>
+
+
+</body>
+
+
+{% endblock content %}
+
+
+</html>

@@ -1,0 +1,98 @@
+<!-- calen/templates/calen/calendar.html -->
+
+{% extends 'cal_home/base.html' %}
+
+{% block content %}
+<div class ="calenbody">
+<div class="clearfix">
+    <div class="sidenav">
+        <h><u>Notes</u></h>
+        <p>Crossed out events have passed</p>
+        <p>Events are in order of when they were made not their times</p>
+        <p>Highlighted events can be edited and deleted</p>
+        <p><u>Customize Your Calendar Colors</u></p> 
+        <p><label for="colorBackground">Calendar's Background:</label>
+        <input type="color" id="colorBackground" onchange="clickColorBack(); saveBgColor();" value="#e2ffec"></p>
+        <p><label for="colorBorder">Calendar's Border:</label>
+        <input type="color" id="colorBorder" onchange="clickColorBorder()" value="#ffbe78"></p>
+        <p><label for="colorText">Calendar's Text:</label>
+        <input type="color" id="colorText" onchange="clickColorText()" value="#000000"></p>
+        <p><label for="colorMark">Calendar's Mark:</label>
+        <input type="color" id="colorMark" onchange="clickColorMark()" value="#ff85b4"></p>
+    </div>
+    <div class="main">
+        <a style="font-weight:bold" class="btn btn-info left" href="{% url 'calen:calendarhome' %}?{{prev_month}}">Previous Month</a>
+        <a style="font-weight:bold" class="btn btn-info right" href="{% url 'calen:calendarhome' %}?{{next_month}}">Next Month</a>
+        <a style="font-weight:bold" class="btn btn-info right" href="{% url 'calen:event_new' %}">New Event</a>
+       
+        {{ calendar  }}
+        
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+
+    function clickColorBack(){
+        var root = document.documentElement;
+        var x = document.getElementById("colorBackground").value;
+        var tab = document.getElementById("CalenTable");
+        var trs = tab.getElementsByTagName("tr");
+        var tds = tab.getElementsByTagName("td");
+        for(var i = 0, j = trs.length; i < j; ++i){
+            trs[i].style.backgroundColor.innerHTML=x;
+        }
+        for(var i = 0, j = tds.length; i < j; ++i){
+            tds[i].style.backgroundColor.innerHTML=x;
+        }
+        root.style.setProperty("--backcol", x);
+    }
+
+    
+
+    function saveBgColor() {
+        var x = document.getElementById("CalenTable");
+        x.value = document.getElementById("CalenTable").style.backgroundColor;
+     localStorage.setItem("bgcolor", x);
+    }
+
+  
+
+    function clickColorBorder(){
+        var x = document.getElementById("colorBorder").value;
+        var tab = document.getElementById("CalenTable");
+        var trs = tab.getElementsByTagName("tr");
+        var tds = tab.getElementsByTagName("td");
+        for(var i = 0, j = trs.length; i < j; ++i){
+            trs[i].style.borderColor=x;
+        }
+        for(var i = 0, j = tds.length; i < j; ++i){
+            tds[i].style.borderColor=x;
+        }
+    }
+    function clickColorText(){
+        var x = document.getElementById("colorText").value;
+        document.getElementById("CalenMark").style.color=x;
+        var tab = document.getElementById("CalenTable");
+        var trs = tab.getElementsByTagName("tr"); 
+        var tds = tab.getElementsByTagName("td");
+        for(var i = 0, j = trs.length; i < j; ++i){
+            trs[i].style.color=x;
+        }
+        for(var i = 0, j = tds.length; i < j; ++i){
+            tds[i].style.color=x;
+        }
+        
+    }
+    function clickColorMark(){
+        var x = document.getElementById("colorMark").value;
+        document.getElementById("CalenMark").style.backgroundColor=x;
+    }
+    
+ 
+</script>
+
+</div>
+
+{% endblock %}
+

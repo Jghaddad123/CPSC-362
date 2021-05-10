@@ -1,0 +1,40 @@
+{% extends 'cal_home/base.html' %}
+
+{% block title %}
+Event
+{% endblock %}
+
+{% block content %}
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                {{ field.label }} <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ field.label }} <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<form method="post" style="margin-top: 20px;">
+    {% csrf_token %}
+    <div class="eventnote">
+        <h><u>Notes</u></h>
+        <p>Start time should be written as: MM/DD/YYYY hr:min AM/PM</p>
+        <p><h2>Ex:</h2>05/05/2021 03:45 PM</p>
+        <p>End time is written in the same way</p>
+    </div>
+    <table class="form form-table">
+        {{form}}
+        <tr>
+            <td><button type="submit" name="delete_event" class="btn btn-info right">Delete</button></td>
+            <td colspan="2"><button type="submit" class="btn btn-info right">Submit</button></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

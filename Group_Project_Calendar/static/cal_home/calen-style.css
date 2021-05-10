@@ -1,0 +1,154 @@
+/* calen/static/calen/css/styles.css */
+
+:root{
+    --backcol:#e2ffec;
+}
+
+.calendar{
+    width: 98%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.calendar tr, .calendar td{
+    border: 5px solid #ffbe78;
+    background-color: var(--backcol);
+}
+
+.calendar th{
+    padding: 10px;
+    text-align: center;
+    font-size:20px;
+
+}
+
+.calendar td{
+    width: 200px;
+    height: 150px;
+    padding: 20px 0px 0px 5px;
+    font-size:20px;
+}
+
+.month{
+    font-size: 25px;
+}
+
+.date{
+    font-size: 16px;
+}
+del{
+    text-decoration: line-through;
+}
+
+
+ul{
+    height: 100%;
+    padding: 0px 5px 0px 20px;
+}
+
+a{
+    color: #17a2b8;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.btn{
+    outline: none;
+    color: black;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    position: static;
+}
+
+.clearfix{
+    margin: 15px;
+    position: static;
+}
+
+.form{
+    margin: auto;
+    padding: 0px 10px;
+}
+
+.form input, .form select, .form textarea{
+    border-radius: 5px;
+    border: 1px solid #17a2b8;
+    outline: none;
+    background: none;
+    padding: 5px;
+    width: 100%;
+}
+
+mark{
+    background-color:#ff85b4;
+}
+
+.sidenav{
+   width: 250px;
+   position: fixed;
+   z-index: 1;
+   top: 20px;
+   left: 10px;
+   background: #fdcf9d;
+   overflow-x: hidden;
+   padding: 8px 0px;
+   margin: 50px 5px 0px 0px;
+}
+
+.sidenav p{
+    padding: 16px 16px 6px 16px;
+    text-decoration: none;
+    font-size:20px;
+    color: black;
+    display: block;
+}
+
+.sidenav h{
+    font-size: 25px;
+    font-weight: bold;
+}
+.main{
+    margin-left: 250px;
+    padding: 0px 10px 0px 150px;
+}
+
+li{
+    font-size: 15px;
+}
+
+.eventnote{
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 10px;
+    background: #fdcf9d;
+    overflow-x: hidden;
+    padding: 8px 0px;
+    margin: 100px 5px 0px 0px;
+ }
+ 
+ .eventnote p{
+     padding: 16px 16px 6px 16px;
+     text-decoration: none;
+     font-size: 20px;
+     color: black;
+     display: block;
+ }
+ 
+ .eventnote h{
+     font-size: 35px;
+     font-weight: bold;
+ }
+
+ .eventnote h2{
+     font-size: 20px;
+     font-weight: bold;
+ }
+

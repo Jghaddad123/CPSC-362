@@ -1,0 +1,145 @@
+{% extends 'cal_home/base.html' %}
+<!DOCTYPE html>
+
+
+{% load static %}
+
+<html>
+<head>
+    
+      <title>Home</title>
+
+</head>
+
+<body onload = "useBgColorH();">
+{% block content %}
+
+
+<div class="container" id="containerHome" >
+    <button style="float:none" id="settingsbtn" onclick="openFormB();">Customize</button>
+    <form class = "form-popup2" id ="settingsHome">
+        <form action="/action_page.php" class="form-container">
+        <p>Customize your home page here.</p>
+        <p><label for="colorHomeBG">Homepage Background:</label>
+            <input type="color" id="colorHome" onchange="clickColorBackH();" value="#cfe5ee"></p>
+            <p><label for="colorborderBG">Homepage Border:</label>
+                <input type="color" id="colorB" onchange="clickColorB();" value="#8a2be2"></p>
+                <p><label for="colorbutton">Buttons:</label>
+                    <input type="color" id="colorBu" onchange="clickColorBu();" value="#69e6d1"></p>
+                    <p><label for="colorbuttonT">Button Text:</label>
+                        <input type="color" id="colorBuT" onchange="clickColorBuT();" value="#1c7987"></p>
+        <button type="button" id="closebtnm" class="btnm" onclick="closeFormB();">Save Changes & Close</button>
+          </form>
+    </form>
+     
+     <a class ="icon1" id = "icon1" type="button" href= {% url 'calen:calendarhome' %}><img src= "{% static 'cal_home/calen1.png' %}"></img>Calendar<br></a>
+    
+ 
+         
+    <a class ="icon2" id = "icon2" type="button" href="#Tasks"><img src= "{% static 'cal_home/calen2.png' %}"></img>Tasks<br></a>
+    
+ 
+ 
+        
+    <a class="icon3"id = "icon3"  type="button" href="#Music"><img src= "{% static 'cal_home/calen3.png' %}"></img>Music<br></a>
+ 
+        
+    <a class="icon4" id = "icon4" type="button" href="#Settings"><img src= "{% static 'cal_home/calen4.png' %}"></img>Settings<br></a>
+   
+
+    <script type="text/javascript">
+     function clickColorBackH(){
+        var x = document.getElementById("colorHome");
+        var b;
+        document.getElementById("containerHome").style.backgroundColor = x.value;
+        b = rgb2hex(document.getElementById("containerHome").style.backgroundColor);
+        document.getElementById("colorHome").value = b;
+        localStorage.setItem = ("homebgc", x);
+    }
+
+    function clickColorB(){
+        var x = document.getElementById("colorB");
+        var b;
+        document.getElementById("containerHome").style.borderColor = x.value;
+        b = rgb2hex(document.getElementById("containerHome").style.borderColor);
+        document.getElementById("colorB").value = b;
+        localStorage.setItem = ("homebgb", x);
+    }
+
+    
+    function clickColorBu(){
+        var x = document.getElementById("colorBu");
+        var b;
+        document.getElementById("icon1").style.backgroundColor = x.value;
+        document.getElementById("icon2").style.backgroundColor = x.value;
+        document.getElementById("icon3").style.backgroundColor = x.value;
+        document.getElementById("icon4").style.backgroundColor = x.value;
+        document.getElementById("settingsbtn").style.backgroundColor = x.value;
+        document.getElementById("settingsHome").style.backgroundColor = x.value;
+        document.getElementById("closebtnm").style.backgroundColor = x.value;
+        b = rgb2hex(document.getElementById("icon1").style.backgroundColor);
+        document.getElementById("colorBu").value = b;
+        localStorage.setItem = ("homebgbu", x);
+    }
+
+    function clickColorBuT(){
+        var x = document.getElementById("colorBuT");
+        document.getElementById("icon1").style.color = x.value;
+        document.getElementById("icon2").style.color = x.value;
+        document.getElementById("icon3").style.color = x.value;
+        document.getElementById("icon4").style.color = x.value;
+        localStorage.setItem = ("homebgbT", x);
+    }
+    
+
+     function useBgColorH() {
+          var x = localStorage.getItem("homebgc");
+          var y = localStorage.getItem("homebgb");
+          var z = localStorage.getItem("homebgbu");
+          var a = localStorage.getItem("homebgbT");
+          if (localStorage.getItem("homebgc") != null) {
+            document.getElementById("containerHome").style.backgroundColor = x.value;
+    document.getElementById("containerHome").style.borderColor = y.value;
+    document.getElementById("icon1").style.backgroundColor = z.value;
+        document.getElementById("icon2").style.backgroundColor = z.value;
+        document.getElementById("icon3").style.backgroundColor = z.value;
+        document.getElementById("icon4").style.backgroundColor = z.value;
+        document.getElementById("settingsbtn").style.backgroundColor = z.value;
+        document.getElementById("settingsHome").style.backgroundColor = z.value;
+        document.getElementById("closebtnm").style.backgroundColor = z.value;
+        document.getElementById("containerHome").style.Color = a.value;
+}
+else{
+    document.getElementById("containerHome").style.backgroundColor = white;
+    document.getElementById("containerHome").style.borderColor = black;
+    document.getElementById("icon1").style.backgroundColor = white;
+        document.getElementById("icon2").style.backgroundColor = white;
+        document.getElementById("icon3").style.backgroundColor = white;
+        document.getElementById("icon4").style.backgroundColor = white;
+        document.getElementById("settingsbtn").style.backgroundColor = white;
+        document.getElementById("settingsHome").style.backgroundColor = white;
+        document.getElementById("closebtnm").style.backgroundColor = white;
+        document.getElementById("containerHome").style.Color = black;
+}
+
+     }
+     var hexDigits = new Array
+        ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
+
+//Function to convert rgb color to hex format
+function rgb2hex(rgb) {
+ rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+ return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
+
+function hex(x) {
+  return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+ }
+     </script>
+
+</div>
+
+{% endblock %}
+    </body>
+
+</html>

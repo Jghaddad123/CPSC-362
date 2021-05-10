@@ -1,0 +1,62 @@
+{% load static %}
+
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html style="height:auto;" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/cal_home/style.css' %}">
+    <title>Task Scheduler</title>
+
+{% block content %}
+<body style="height:auto;">
+<div>
+
+<div class = "hero">
+   <div class = "form-box">
+       <div class = "image-icons">
+        <img src="{% static '/cal_home/calendarpic1.jpg' %}">
+        </div>
+    <p>
+    <h1 class ="home_title">LOGIN</h1> <br>
+    </p>
+        <div class = "">
+          <form method="POST">
+            {% csrf_token %}
+        
+            <fieldset class="form-group"><br>
+              <center>{{ form|crispy }}<!--Using django's crispy_forms to help front end--></center><br>
+        
+            <center><br>
+
+            <div class="form-group">
+              <button class="button-box">Login</button>
+                <a href="{% url 'password_reset' %}">Forgot Password? </a>
+            </div>
+            </center><br>
+            </fieldset>
+
+          </form>
+          <div class="border-top pt-3">
+            <center>
+              <h3 class="text-muted" style="margin-top: 75px;">
+                Need An Account: <a class "ml-2" href="{% url 'register' %}">Sign Up Now</a>
+              </h3>
+        
+              <br>
+              
+              <h3 class="text-muted">
+                Back to Home:       <a class "ml-2" href="{% url 'cal_landing' %}">Home Page</a>
+              </h3>
+            </center>
+          </div>
+        
+        </div>
+    </div>
+
+  </body>  
+  {% endblock content %}
+
+  </html>
+  
